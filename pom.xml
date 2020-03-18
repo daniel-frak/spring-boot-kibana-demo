@@ -15,6 +15,7 @@
     <description>Demo project for browsing Spring Boot logs in Kibana via Elasticsearch</description>
 
     <properties>
+        <logstash.logback.encoder.version>6.3</logstash.logback.encoder.version>
         <java.version>11</java.version>
     </properties>
 
@@ -46,6 +47,13 @@
                     <artifactId>junit-vintage-engine</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <!-- Logstash -->
+        <dependency>
+            <groupId>net.logstash.logback</groupId>
+            <artifactId>logstash-logback-encoder</artifactId>
+            <version>${logstash.logback.encoder.version}</version>
         </dependency>
     </dependencies>
 
